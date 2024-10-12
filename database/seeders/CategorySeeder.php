@@ -12,6 +12,13 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::factory(3)->create();
+        Category::factory(3)->create(
+            // [
+            //     'color' => function () {
+            //         $faker = \Faker\Factory::create('en_US');
+            //         return $faker->word;
+            //     },
+            // ]
+        );
     }
 }
