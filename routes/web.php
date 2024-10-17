@@ -42,3 +42,7 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('about', ['title' => 'About']);
 });
+
+Route::get('/cv', function () {
+    return view('cv', ['title' => 'CV Vincentius Hadianta Wibawa']);
+});
