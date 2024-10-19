@@ -1,99 +1,73 @@
-<x-normal-layout>
-    <x-slot:title>{{ $title }}</x-slot:title>
-    <h1>VINCENTIUS HADIANTA WIBAWA</h1>
-
-    <section>
-        <h2>Biodata</h2>
-        <p>City: Semarang</p>
-        <p>Email: <a href="mailto:hadiantavincent@gmail.com">
-                hadiantavincent@gmail.com</a></p>
-        <p>LinkedIn: <a
-                href="https://www.linkedin.com/in/vincentius-hadianta-wibawa-683754181?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsTgp1hnHR%2BSNtz3FwQdwLw%3D%3D"
-                target="_blank">
-                Vincentius Hadianta Wibawa
-            </a>
-        </p>
-        <p>Github: <a href="https://github.com/errorsolver" target="_blank">@errorsolver</a></p>
-    </section>
-
-    <section>
-        <h2>Profile</h2>
-        <p>An enthusiastic computer science undergraduate with a strong passion for web development and software
+<x-cv-normal-layout>
+    {{-- Web title --}}
+    <x-slot:title>
+        Portofolio
+    </x-slot:title>
+    <hr>
+    {{-- Header --}}
+    <x-cv-hero>
+        <x-slot:name>Vincentius Hadianta Wibawa</x-slot:name>
+    </x-cv-hero>
+    <main class="font-sans m-auto max-w-screen-md">
+        <hr>
+        {{-- Profile --}}
+        <x-cv-testimonial>
+            <h3
+                class="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">
+                Profile
+            </h3>
+            An enthusiastic informatics engineering undergraduate with a strong passion for web development and software
             engineering. Familiar with programming languages such as HTML, CSS, JavaScript, Golang, and C++, and
             frameworks
             like Gin and GORM. Eager to apply problem-solving skills in real-world projects and grow within a
             collaborative
-            environment.</p>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <h3>Dian Nuswantoro</h3>
-        <p>Bachelor's Degree in Computer Science</p>
-        <p>2023 - Present</p>
-        <p>Current GPA: 3.91</p>
-    </section>
-
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>NodeJS</li>
-            <li>Laravel</li>
-            <li>NestJS</li>
-            <li>Golang</li>
-            <li>Python</li>
-            <li>C++</li>
-            <li>Github</li>
-            <li>Docker</li>
-            <li>PostgreSQL</li>
-            <li>MySql</li>
-            <li>SqlLite</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Project Experience</h2>
-        <ul>
-            <li>
-                <details>
-                    <summary>Message App</summary>
-                    <p>Deployed on Fly.io and use PostgreSQL for database. featuring login, signup, message sending, and
-                        message management functionalities.</p>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>Message App</summary>
-                    <p>Deployed on Fly.io and use PostgreSQL for database. featuring login, signup, message sending, and
-                        message management functionalities.</p>
-                </details>
-
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>
-                <a href="https://codepolitan.com/c/DF9WJUX">Sertifikat Kelas Belajar Menguasai Nest.js</a>
-            </li>
-            <li>
-                <a href="dicoding.com/certificates/NVP7QJ30WZR0">Belajar Membuat Front-End Web untuk Pemula</a>
-            </li>
-            <li>
-                <a href="https://www.dicoding.com/certificates/07Z60871RZQR">Belajar Dasar Pemrograman Web</a>
-            </li>
-            <li>
-                <a href="https://www.dicoding.com/certificates/KEXL1Y47WXG2" target="_blank">Belajar Dasar Programming
-                    JavaScript</a>
-            </li>
-            <li>
-                <a href="https://www.codepolitan.com/c/X7SJW3N/">Sertifikat Kelas Belajar Go-Lang untuk Pemula</a>
-            </li>
-        </ul>
-    </section>
-</x-normal-layout>
+            environment.
+        </x-cv-testimonial>
+        <hr>
+        {{-- Education --}}
+        <x-cv-testimonial>
+            <h3
+                class="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">
+                Education
+            </h3>
+            <h4 class="text-2xl font-medium text-gray-900 dark:text-white">
+                Dian Nuswantoro Semarang University
+            </h4>
+            <b>
+                2023 - Present
+            </b>
+            <p class="text-base font-medium text-gray-900 dark:text-white">
+                Informatics Engineering
+            </p>
+            <p class="text-base font-medium text-gray-900 dark:text-white">
+                Cumulative GPA: 3.91
+            </p>
+        </x-cv-testimonial>
+        <hr>
+        {{-- Rechical Skill --}}
+        <x-cv-tech-list />
+        <hr>
+        {{-- Project Experience --}}
+        <x-cv-body-image>
+            <x-slot:link>https://messanger-apps.fly.dev/</x-slot:link>
+            <x-slot:title>Messanger App</x-slot:title>
+            <x-slot:desc>MessagerApp is a dynamic messaging platform designed to connect people across the globe.
+                Whether you're looking to meet new people or exchange messages with strangers, MessagerApp offers a
+                seamless, user-friendly experience. Using Javascript, ExpressJS, and PostgreSQL.</x-slot:desc>
+            <x-slot:img>img/portofolio/MessangerApp.png</x-slot:img>
+            <x-slot:class></x-slot:class>
+        </x-cv-body-image>
+        <x-cv-body-image>
+            <x-slot:link>https://vincentius-hadianta-wibawa.fly.dev/posts</x-slot:link>
+            <x-slot:title>News App</x-slot:title>
+            <x-slot:desc>API provides news listings and detailed articles, with sorting options by tags or
+                author names. Each news item includes title, content, author, publication date, and tags. It supports
+                dynamic filtering and is easy to integrate with front-end or mobile apps.</x-slot:desc>
+            <x-slot:img>img/portofolio/NewsApp.png</x-slot:img>
+            <x-slot:class>order-first</x-slot:class>
+        </x-cv-body-image>
+        {{-- Certification List --}}
+        {{-- <x-cv-cert-list></x-cv-cert-list> --}}
+    </main>
+    <x-cv-footer />
+</x-cv-normal-layout>
